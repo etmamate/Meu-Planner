@@ -23,11 +23,13 @@ Um quadro de tarefas simples e funcional, inspirado no Microsoft Planner, onde v
 6. Clique em **"🗑️ Excluir"** para remover um card
 
 ## 📁 Estrutura
+```
 planner/
 ├── index.html # Estrutura HTML
 ├── style.css # Estilização do Projeto
 ├── script.js # Lógica de toda a página
 └── README.md # Este arquivo
+```
 
 ## 🛠️ Tecnologias
 
