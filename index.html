@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Taskman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="planner-container">
+    <div class="planner-header">
+        <div class="title-area">
+            <h1>📋 Taskman</h1>
+            <p>Organizador de Tarefas 2000</p>
+        </div>
+        <button class="btn-criar-card" id="openModalBtn">+ Criar novo card</button>
+    </div>
+
+    <div class="kanban-board">
+        <!-- coluna A FAZER -->
+        <div class="column" data-status="todo" id="col-todo">
+            <div class="column-header">
+                <h2>📌 A fazer <span class="badge-count" id="todo-count">0</span></h2>
+            </div>
+            <div class="cards-container" id="todo-cards"></div>
+        </div>
+
+        <!-- coluna FAZENDO -->
+        <div class="column" data-status="doing" id="col-doing">
+            <div class="column-header">
+                <h2>⚙️ Fazendo <span class="badge-count" id="doing-count">0</span></h2>
+            </div>
+            <div class="cards-container" id="doing-cards"></div>
+        </div>
+
+        <!-- coluna FINALIZADO -->
+        <div class="column" data-status="done" id="col-done">
+            <div class="column-header">
+                <h2>✅ Finalizado <span class="badge-count" id="done-count">0</span></h2>
+            </div>
+            <div class="cards-container" id="done-cards"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de criação de card -->
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal-card">
+        <h3>➕ Novo card</h3>
+        <div class="form-group">
+            <label>Título *</label>
+            <input type="text" id="cardTitle" placeholder="Ex: Revisar documentação" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label>Responsável (quem irá fazer)</label>
+            <input type="text" id="cardAssignee" placeholder="Nome ou equipe">
+        </div>
+        <div class="form-group">
+            <label>Horas estimadas</label>
+            <input type="number" id="cardHours" placeholder="Ex: 3.5" step="0.5" min="0">
+        </div>
+        <div class="modal-buttons">
+            <button class="btn-cancel" id="cancelModalBtn">Cancelar</button>
+            <button class="btn-confirm" id="confirmCardBtn">Criar card</button>
+        </div>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
